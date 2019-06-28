@@ -8,11 +8,11 @@ dnormmix(x, mu, sigma = rep(1, length(mu)), prob = rep(1/length(mu),
   length(mu)))
 }
 \arguments{
+\item{x}{vetor de quantis}
+
 \item{mu}{vetor das médias}
 
 \item{sigma}{vetor da variâncias}
-
-\item{n}{número de onservacões}
 
 \item{prop}{vetor das probabilidades}
 }

@@ -8,7 +8,7 @@ rbnormmix(n, mu, sigma = rep(list(diag(length(mu))), length(mu)),
   prob = rep(1/length(mu), length(mu)))
 }
 \arguments{
-\item{n}{número de onservacões}
+\item{n}{número de observacões}
 
 \item{mu}{vetor das médias}
 

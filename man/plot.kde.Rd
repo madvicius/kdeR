@@ -9,7 +9,7 @@
 \arguments{
 \item{kde}{objeto da classe kde}
 
-\item{...}{você pode utilizar outros argumentos da funcão plot.default}
+\item{...}{você pode utilizar outros argumentos da funcao plot.default}
 }
 \description{
 Plota a densidade estimada pelo KDE univariado

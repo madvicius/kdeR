@@ -1,7 +1,11 @@
-library(dplyr)
-library(purrr)
+
+
 
 #' Estima a distribuicão univariada de uma amostra por KDE
+#' @importFrom dplyr %>%
+#' @importFrom purrr pmap
+#' @importFrom purrr map_dbl
+#' @importFrom mvtnorm rmvnorm
 #' @export kde
 kde <- function(
     sp, h = c('NS', 'STE'),

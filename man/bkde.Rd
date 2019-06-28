@@ -19,3 +19,11 @@ bkde(sp, h = c("NS", "STE"), kernel = dmvnorm, ngrid = 100)
 \description{
 Estima a distribuicão bivariada de uma amostra por KDE
 }
+\examples{
+xy <- rbnormmix(100, list(c(-5, -5), c(5, 5)))
+
+bmix_bkde <- bkde(xy, h='STE')
+
+plot(bmix_bkde,pch=16)
+contour(bmix_bkde,add=TRUE)
+}

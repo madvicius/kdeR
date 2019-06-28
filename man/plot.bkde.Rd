@@ -14,3 +14,11 @@
 \description{
 Plota os dados de BKDE
 }
+\examples{
+ xy <- rbnormmix(100, list(c(-5, -5), c(5, 5)))
+
+bmix_bkde <- bkde(xy, h='STE')
+
+plot(bmix_bkde,pch=16)
+contour(bmix_bkde,add=TRUE)
+}

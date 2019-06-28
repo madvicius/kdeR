@@ -13,3 +13,10 @@
 \description{
 Plota a densidade estimada por BKDE
 }
+\examples{
+xy <- rbnormmix(100, list(c(-5, -5), c(5, 5)))
+
+bmix_bkde <- bkde(xy, h='STE')
+
+persp(bmix_bkde,theta=-120,phi=30)
+}

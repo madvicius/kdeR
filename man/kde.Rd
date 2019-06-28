@@ -19,3 +19,9 @@ kde(sp, h = c("NS", "STE"), kernel = dnorm, ngrid = 10000)
 \description{
 Estima a distribuicão univariada de uma amostra por KDE
 }
+\examples{
+x <- rnormmix(100, c(-5, 5))
+xy <- kde(x, h='STE')
+
+plot(xy)
+}

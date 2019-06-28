@@ -8,6 +8,11 @@
 #' , "STE" (solve the equation) e "NS" (normal scale). default = STE
 #' @param kernel kernel utilizado na estimacão. default = dnorm
 #' @param ngrid numero de pontos na malha. default = 10000
+#' @examples
+#' x <- rnormmix(100, c(-5, 5))
+#' xy <- kde(x, h='STE')
+#'
+#' plot(xy)
 kde <- function(
     sp, h = c('NS', 'STE'),
     kernel = dnorm, ngrid = 10000
@@ -60,6 +65,13 @@ plot.kde <- function(kde, xlab='x', ylab='density',...) {
 #' , "STE" (solve the equation) e "NS" (normal scale). default = STE
 #' @param kernel kernel utilizado na estimacão. default = dmvnorm
 #' @param ngrid numero de pontos na malha. default = 100
+#' @examples
+#' xy <- rbnormmix(100, list(c(-5, -5), c(5, 5)))
+#'
+#' bmix_bkde <- bkde(xy, h='STE')
+#'
+#' plot(bmix_bkde,pch=16)
+#' contour(bmix_bkde,add=TRUE)
 bkde <- function(
     sp, h = c('NS', 'STE'),
     kernel = dmvnorm, ngrid = 100
@@ -120,6 +132,13 @@ bkde <- function(
 #' @export plot.bkde
 #' @param bkde objeto da classe bkde
 #' @param ... você pode utilizar outros argumentos da funcão plot.default
+#' @examples
+#'  xy <- rbnormmix(100, list(c(-5, -5), c(5, 5)))
+#'
+#' bmix_bkde <- bkde(xy, h='STE')
+#'
+#' plot(bmix_bkde,pch=16)
+#' contour(bmix_bkde,add=TRUE)
 plot.bkde <- function(bkde,
                       xlab= 'x',
                       ylab= 'y',
@@ -135,6 +154,14 @@ plot.bkde <- function(bkde,
 #' @param bkde objeto da classe bkde
 #' @param quantiles defini os niveis do gráfico de contorno
 #' @parm ... você pode utilizar os outros parametros da função contour.default
+#' @examples
+#' xy <- rbnormmix(100, list(c(-5, -5), c(5, 5)))
+#'
+#' bmix_bkde <- bkde(xy, h='STE')
+#'
+#' plot(bmix_bkde,pch=16)
+#' contour(bmix_bkde,add=TRUE)
+
 contour.bkde <- function(bkde,
                          xlab= 'x',
                          ylab= 'y',
@@ -156,6 +183,13 @@ contour.bkde <- function(bkde,
 #' @export persp.bkde
 #' @param bkde objeto da classe bkde
 #' @parm ... você pode utilizar os outros parametros da função persp.default
+#' @examples
+#' xy <- rbnormmix(100, list(c(-5, -5), c(5, 5)))
+#'
+#' bmix_bkde <- bkde(xy, h='STE')
+#'
+#' persp(bmix_bkde,theta=-120,phi=30)
+
 persp.bkde <- function(bkde,
                       xlab='x',
                       ylab='y',

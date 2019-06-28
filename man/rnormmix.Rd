@@ -19,3 +19,8 @@ rnormmix(n, mu, sigma = rep(1, length(mu)), prob = rep(1/length(mu),
 \description{
 Amostra uma mistura de normais univariada
 }
+\examples{
+ x <- rnormmix(100, c(-5, 5))
+xy <- kde(x, h='STE')
+plot(xy)
+}

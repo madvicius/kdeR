@@ -19,3 +19,12 @@ dnormmix(x, mu, sigma = rep(1, length(mu)), prob = rep(1/length(mu),
 \description{
 Densidade da mistura de normais univariada
 }
+\examples{
+sim <- rnormmix(105, mu = c(-1.75, 0.6, 3.0),
+sigma = c(0.75, 0.5, 0.75), prob = c(3/6, 1/6, 2/6))
+
+dsim <- normmix(sort(sim1), mu = c(-1.75, 0.6, 3.0),
+sigma = c(0.75, 0.5, 0.75), prob = c(3/6, 1/6, 2/6))
+
+plot(sort(sim),dsim, type = 'l')
+}

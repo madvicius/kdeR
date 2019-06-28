@@ -19,3 +19,12 @@ rbnormmix(n, mu, sigma = rep(list(diag(length(mu))), length(mu)),
 \description{
 Amostra uma mistura de normais bivariadas
 }
+\examples{
+xy <- rbnormmix(100, list(c(-5, -5), c(5, 5)))
+
+bmix_bkde <- bkde(xy, h='STE')
+
+persp(bmix_bkde,theta=-120,phi=30)
+plot(bmix_bkde,pch=16)
+contour(bmix_bkde,add=TRUE)
+}

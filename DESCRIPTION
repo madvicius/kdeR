@@ -24,5 +24,4 @@ Imports:
     purrr (>= 0.3.2),
     archdata (>= 1.2),
     mvtnorm (>= 1.0-11)
-
 RoxygenNote: 6.1.1

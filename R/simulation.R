@@ -1,3 +1,5 @@
+library(dplyr)
+library(purrr)
 
 .shuffle_rows <- function(mat) {
     mat[sample(nrow(mat)), ]

@@ -4,6 +4,7 @@
 }
 
 #' Amostra uma mistura de normais univariada
+#' @export rnormmix
 rnormmix <- function(
     n,
     mu,
@@ -11,14 +12,15 @@ rnormmix <- function(
     prob = rep(1/length(mu), length(mu))
 ) {
     ni <- as.vector(rmultinom(1, n, prob))
-    
-    list(ni, mu, sigma) %>% 
-        pmap(~ rnorm(..1, ..2, ..3)) %>% 
-        simplify() %>% 
+
+    list(ni, mu, sigma) %>%
+        pmap(~ rnorm(..1, ..2, ..3)) %>%
+        simplify() %>%
         sample()
 }
 
 #' Densidade da mistura de normais univariada
+#' @export dnormmix
 dnormmix <- function(
     x,
     mu,
@@ -29,6 +31,7 @@ dnormmix <- function(
 }
 
 #' Amostra uma mistura de normais bivariadas
+#' @export rbnormmix
 rbnormmix <- function(
     n,
     mu,
@@ -36,9 +39,9 @@ rbnormmix <- function(
     prob = rep(1/length(mu), length(mu))
 ) {
     ni <- as.vector(rmultinom(1, n, prob/sum(prob)))
-    
-    list(ni, mu, sigma) %>% 
-        pmap(~ rmvnorm(..1, ..2, ..3)) %>% 
-        do.call(rbind, .) %>% 
+
+    list(ni, mu, sigma) %>%
+        pmap(~ rmvnorm(..1, ..2, ..3)) %>%
+        do.call(rbind, .) %>%
         .shuffle_rows()
 }

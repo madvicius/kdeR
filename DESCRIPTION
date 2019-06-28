@@ -2,13 +2,21 @@ Package: kdeR
 Title: Kernel Density Estimation
 Version: 0.1.0
 Authors@R: 
-    person(given = "First",
-           family = "Last",
+    person(given = "Pedro",
+           family = "Nasevicius Ramos",
            role = c("aut", "cre"),
-           email = "first.last@example.com",
-           comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: Make kernel density estimation with the methods "Solve the Equation" and "Normal Scale".
-License: What license it uses
+           email = "nasevicius1997@gmail.com",
+           comment = c(Github = "madvicius"))
+    person(given = "Giuseppe",
+           family = "Tinti Tomio",
+           role = c("aut", "cre"),
+           email = "giu.tinti@gmail.com")
+    person(given = "Lucas",
+           family = "Ramos Tavares",
+           role = c("aut", "cre"),
+           email = "lucasRTavares92@gmail.com")
+Description: Methods for kernel density estimatione visualization.
+License: MIT
 Encoding: UTF-8
 LazyData: true
 Imports: 
@@ -16,5 +24,5 @@ Imports:
     purrr,
     mvtnorm,
     archdata,
-    rlang,
-    digest
+    rlang
+RoxygenNote: 6.1.1

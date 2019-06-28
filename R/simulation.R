@@ -1,5 +1,3 @@
-require(tidyverse)
-require(mvtnorm)
 
 .shuffle_rows <- function(mat) {
     mat[sample(nrow(mat)), ]

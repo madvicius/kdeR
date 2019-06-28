@@ -1,13 +1,19 @@
 Package: kdeR
-Title: What the Package Does (One Line, Title Case)
-Version: 0.0.0.9000
+Title: Kernel Density Estimation
+Version: 0.1.0
 Authors@R: 
     person(given = "First",
            family = "Last",
            role = c("aut", "cre"),
            email = "first.last@example.com",
            comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
+Description: Make kernel density estimation with the methods "Solve the Equation" and "Normal Scale".
 License: What license it uses
 Encoding: UTF-8
 LazyData: true
+Imports: 
+    dplyr,
+    purrr,
+    mvtnorm,
+    archdata,
+    rlang

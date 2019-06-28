@@ -1,5 +1,4 @@
-require(tidyverse)
-require(mvtnorm)
+
 
 #' Estima a distribuição univariada de uma amostra por KDE
 kde <- function(

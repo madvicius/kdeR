@@ -2,7 +2,7 @@
 % Please edit documentation in R/kde.R
 \name{contour.bkde}
 \alias{contour.bkde}
-\title{Plota um gráfico de contorno de BKDE}
+\title{Plota um grafico de contorno de BKDE}
 \usage{
 \method{contour}{bkde}(bkde, xlab = "x", ylab = "y", quantiles = c(0,
   0.25, 0.5), drawlabels = FALSE, ...)
@@ -10,10 +10,10 @@
 \arguments{
 \item{bkde}{objeto da classe bkde}
 
-\item{quantiles}{defini os niveis do gráfico de contorno}
+\item{quantiles}{defini os niveis do grafico de contorno}
 }
 \description{
-Plota um gráfico de contorno de BKDE
+Plota um grafico de contorno de BKDE
 }
 \examples{
 xy <- rbnormmix(100, list(c(-5, -5), c(5, 5)))

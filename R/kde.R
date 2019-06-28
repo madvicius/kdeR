@@ -1,12 +1,12 @@
 
 
 
-#' Estima a distribuicão univariada de uma amostra por KDE
+#' Estima a distribuicao univariada de uma amostra por KDE
 #' @export kde
-#' @param sp vetor numérico de qual o kde irá estimar a densidade
-#' @param h método utilizado para o cálculo de h. A funcao possui duas opcões
-#' , "STE" (solve the equation) e "NS" (normal scale). default = STE
-#' @param kernel kernel utilizado na estimacão. default = dnorm
+#' @param sp vetor numerico de qual o kde ira estimar a densidade
+#' @param h metodo utilizado para o calculo de h. A funcao possui duas opcoes
+#' , "STE" (solve the equation) e "NS" (normal scale). default = NS
+#' @param kernel kernel utilizado na estimacao. default = dnorm
 #' @param ngrid numero de pontos na malha. default = 10000
 #' @examples
 #' x <- rnormmix(100, c(-5, 5))
@@ -53,17 +53,17 @@ kde <- function(
 #' Plota a densidade estimada pelo KDE univariado
 #' @export plot.kde
 #' @param kde objeto da classe kde
-#' @param ... você pode utilizar outros argumentos da funcão plot.default
+#' @param ... você pode utilizar outros argumentos da funcao plot.default
 plot.kde <- function(kde, xlab='x', ylab='density',...) {
     plot(kde$x, kde$y, type='l', xlab=xlab, ylab=ylab,... )
 }
 
-#' Estima a distribuicão bivariada de uma amostra por KDE
+#' Estima a distribuicao bivariada de uma amostra por KDE
 #' @export bkde
-#' @param sp vetor numérico de qual o bkde irá estimar a densidade
-#' @param h método utilizado para o cálculo de h. A funcao possui duas opcões
-#' , "STE" (solve the equation) e "NS" (normal scale). default = STE
-#' @param kernel kernel utilizado na estimacão. default = dmvnorm
+#' @param sp vetor numerico de qual o bkde ira estimar a densidade
+#' @param h metodo utilizado para o calculo de h. A funcao possui duas opcoes
+#' , "STE" (solve the equation) e "NS" (normal scale). default = NS
+#' @param kernel kernel utilizado na estimacao. default = dmvnorm
 #' @param ngrid numero de pontos na malha. default = 100
 #' @examples
 #' xy <- rbnormmix(100, list(c(-5, -5), c(5, 5)))
@@ -131,7 +131,7 @@ bkde <- function(
 #' Plota os dados de BKDE
 #' @export plot.bkde
 #' @param bkde objeto da classe bkde
-#' @param ... você pode utilizar outros argumentos da funcão plot.default
+#' @param ... você pode utilizar outros argumentos da funcao plot.default
 #' @examples
 #'  xy <- rbnormmix(100, list(c(-5, -5), c(5, 5)))
 #'
@@ -149,11 +149,11 @@ plot.bkde <- function(bkde,
          ylab= ylab,
          ...)
 }
-#' Plota um gráfico de contorno de BKDE
+#' Plota um grafico de contorno de BKDE
 #' @export contour.bkde
 #' @param bkde objeto da classe bkde
-#' @param quantiles defini os niveis do gráfico de contorno
-#' @parm ... você pode utilizar os outros parametros da função contour.default
+#' @param quantiles defini os niveis do grafico de contorno
+#' @parm ... você pode utilizar os outros parametros da funçao contour.default
 #' @examples
 #' xy <- rbnormmix(100, list(c(-5, -5), c(5, 5)))
 #'
@@ -182,7 +182,7 @@ contour.bkde <- function(bkde,
 #' Plota a densidade estimada por BKDE
 #' @export persp.bkde
 #' @param bkde objeto da classe bkde
-#' @parm ... você pode utilizar os outros parametros da função persp.default
+#' @parm ... você pode utilizar os outros parametros da funçao persp.default
 #' @examples
 #' xy <- rbnormmix(100, list(c(-5, -5), c(5, 5)))
 #'

@@ -2,22 +2,22 @@
 % Please edit documentation in R/kde.R
 \name{kde}
 \alias{kde}
-\title{Estima a distribuicão univariada de uma amostra por KDE}
+\title{Estima a distribuicao univariada de uma amostra por KDE}
 \usage{
 kde(sp, h = c("NS", "STE"), kernel = dnorm, ngrid = 10000)
 }
 \arguments{
-\item{sp}{vetor numérico de qual o kde irá estimar a densidade}
+\item{sp}{vetor numerico de qual o kde ira estimar a densidade}
 
-\item{h}{método utilizado para o cálculo de h. A funcao possui duas opcões
-, "STE" (solve the equation) e "NS" (normal scale). default = STE}
+\item{h}{metodo utilizado para o calculo de h. A funcao possui duas opcoes
+, "STE" (solve the equation) e "NS" (normal scale). default = NS}
 
-\item{kernel}{kernel utilizado na estimacão. default = dnorm}
+\item{kernel}{kernel utilizado na estimacao. default = dnorm}
 
 \item{ngrid}{numero de pontos na malha. default = 10000}
 }
 \description{
-Estima a distribuicão univariada de uma amostra por KDE
+Estima a distribuicao univariada de uma amostra por KDE
 }
 \examples{
 x <- rnormmix(100, c(-5, 5))

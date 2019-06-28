@@ -10,6 +10,9 @@
 #' @param mu vetor das médias
 #' @param sigma vetor da variâncias
 #' @param prop vetor das probabilidades
+#' @example x <- rnormmix(100, c(-5, 5))
+#' xy <- kde(x, h='STE')
+#' plot(xy)
 rnormmix <- function(
     n,
     mu,
@@ -33,6 +36,14 @@ rnormmix <- function(
 #' @param mu vetor das médias
 #' @param sigma vetor da variâncias
 #' @param prop vetor das probabilidades
+#' @example
+#' sim <- rnormmix(105, mu = c(-1.75, 0.6, 3.0),
+#' sigma = c(0.75, 0.5, 0.75), prob = c(3/6, 1/6, 2/6))
+#'
+#' dsim <- normmix(sort(sim1), mu = c(-1.75, 0.6, 3.0),
+#' sigma = c(0.75, 0.5, 0.75), prob = c(3/6, 1/6, 2/6))
+#'
+#' plot(sort(sim),dsim, type = 'l')
 dnormmix <- function(
     x,
     mu,
@@ -51,6 +62,14 @@ dnormmix <- function(
 #' @param mu vetor das médias
 #' @param sigma vetor da variâncias
 #' @param prop vetor das probabilidades
+#' @example
+#' xy <- rbnormmix(100, list(c(-5, -5), c(5, 5)))
+#'
+#' bmix_bkde <- bkde(xy, h='STE')
+#'
+#' persp(bmix_bkde,theta=-120,phi=30)
+#' plot(bmix_bkde,pch=16)
+#' contour(bmix_bkde,add=TRUE)
 rbnormmix <- function(
     n,
     mu,

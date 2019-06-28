@@ -14,6 +14,9 @@ rnormmix <- function(
     sigma = rep(1, length(mu)),
     prob = rep(1/length(mu), length(mu))
 ) {
+
+  require(purrr)
+  require(dplyr)
     ni <- as.vector(rmultinom(1, n, prob))
 
     list(ni, mu, sigma) %>%
@@ -30,6 +33,9 @@ dnormmix <- function(
     sigma = rep(1, length(mu)),
     prob = rep(1/length(mu), length(mu))
 ) {
+
+  require(purrr)
+  require(dplyr)
     x %>% map_dbl(~ sum(prob * dnorm(.x, mu, sigma)))
 }
 
@@ -41,6 +47,9 @@ rbnormmix <- function(
     sigma = rep(list(diag(length(mu))), length(mu)),
     prob = rep(1/length(mu), length(mu))
 ) {
+  require(mvtnorm)
+  require(purrr)
+  require(dplyr)
     ni <- as.vector(rmultinom(1, n, prob/sum(prob)))
 
     list(ni, mu, sigma) %>%

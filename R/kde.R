@@ -7,6 +7,8 @@ kde <- function(
     sp, h = c('NS', 'STE'),
     kernel = dnorm, ngrid = 10000
 ) {
+  require(purrr)
+  require(dplyr)
     n <- length(sp)
     if (is.character(h)) { h <- switch( h[1],
         `NS` = bw.nrd(sp),
@@ -50,6 +52,8 @@ bkde <- function(
     sp, h = c('NS', 'STE'),
     kernel = dmvnorm, ngrid = 100
 ) {
+  require(purrr)
+  require(dplyr)
     n <- nrow(sp)
     if (is.character(h)) {
         h1 <- switch( h[1],

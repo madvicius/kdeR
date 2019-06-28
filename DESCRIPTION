@@ -16,4 +16,5 @@ Imports:
     purrr,
     mvtnorm,
     archdata,
-    rlang
+    rlang,
+    digest

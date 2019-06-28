@@ -1,4 +1,5 @@
-
+library(dplyr)
+library(purrr)
 
 #' Estima a distribuicão univariada de uma amostra por KDE
 #' @export kde

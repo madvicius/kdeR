@@ -20,9 +20,8 @@ License: GPL-2
 Encoding: UTF-8
 LazyData: true
 Imports: 
-    dplyr,
-    purrr,
-    mvtnorm,
-    archdata,
-    rlang
+    dplyr (>= 0.8.1),
+    purrr (>= 0.3.2),
+    mtvnorm (>= 1.0.11),
+    archdata (>= 1.2)
 RoxygenNote: 6.1.1

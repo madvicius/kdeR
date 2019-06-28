@@ -1,6 +1,4 @@
-library(dplyr)
-library(purrr)
-library(mvtnorm)
+
 
 .shuffle_rows <- function(mat) {
     mat[sample(nrow(mat)), ]
@@ -8,6 +6,8 @@ library(mvtnorm)
 
 #' Amostra uma mistura de normais univariada
 #' @export rnormmix
+#' @import dplyr
+#'
 rnormmix <- function(
     n,
     mu,

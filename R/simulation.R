@@ -1,5 +1,6 @@
 library(dplyr)
 library(purrr)
+library(mvtnorm)
 
 .shuffle_rows <- function(mat) {
     mat[sample(nrow(mat)), ]

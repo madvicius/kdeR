@@ -7,6 +7,15 @@
 rbnormmix(n, mu, sigma = rep(list(diag(length(mu))), length(mu)),
   prob = rep(1/length(mu), length(mu)))
 }
+\arguments{
+\item{n}{número de onservacões}
+
+\item{mu}{vetor das médias}
+
+\item{sigma}{vetor da variâncias}
+
+\item{prop}{vetor das probabilidades}
+}
 \description{
 Amostra uma mistura de normais bivariadas
 }

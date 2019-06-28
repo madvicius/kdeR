@@ -45,14 +45,21 @@ kde <- function(
     )
 }
 
-#' Plota a densidade estimada por KDE
+#' Plota a densidade estimada pelo KDE univariado
 #' @export plot.kde
+#' @param kde objeto da classe kde
+#' @param ... você pode utilizar outros argumentos da funcão plot.default
 plot.kde <- function(kde, xlab='x', ylab='density',...) {
     plot(kde$x, kde$y, type='l', xlab=xlab, ylab=ylab,... )
 }
 
 #' Estima a distribuicão bivariada de uma amostra por KDE
 #' @export bkde
+#' @param sp vetor numérico de qual o bkde irá estimar a densidade
+#' @param h método utilizado para o cálculo de h. A funcao possui duas opcões
+#' , "STE" (solve the equation) e "NS" (normal scale). default = STE
+#' @param kernel kernel utilizado na estimacão. default = dmvnorm
+#' @param ngrid numero de pontos na malha. default = 100
 bkde <- function(
     sp, h = c('NS', 'STE'),
     kernel = dmvnorm, ngrid = 100
@@ -111,6 +118,8 @@ bkde <- function(
 
 #' Plota os dados de BKDE
 #' @export plot.bkde
+#' @param bkde objeto da classe bkde
+#' @param ... você pode utilizar outros argumentos da funcão plot.default
 plot.bkde <- function(bkde,
                       xlab= 'x',
                       ylab= 'y',
@@ -123,6 +132,9 @@ plot.bkde <- function(bkde,
 }
 #' Plota um gráfico de contorno de BKDE
 #' @export contour.bkde
+#' @param bkde objeto da classe bkde
+#' @param quantiles defini os niveis do gráfico de contorno
+#' @parm ... você pode utilizar os outros parametros da função contour.default
 contour.bkde <- function(bkde,
                          xlab= 'x',
                          ylab= 'y',
@@ -142,6 +154,8 @@ contour.bkde <- function(bkde,
 
 #' Plota a densidade estimada por BKDE
 #' @export persp.bkde
+#' @param bkde objeto da classe bkde
+#' @parm ... você pode utilizar os outros parametros da função persp.default
 persp.bkde <- function(bkde,
                       xlab='x',
                       ylab='y',

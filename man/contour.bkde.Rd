@@ -7,6 +7,11 @@
 \method{contour}{bkde}(bkde, xlab = "x", ylab = "y", quantiles = c(0,
   0.25, 0.5), drawlabels = FALSE, ...)
 }
+\arguments{
+\item{bkde}{objeto da classe bkde}
+
+\item{quantiles}{defini os niveis do gráfico de contorno}
+}
 \description{
 Plota um gráfico de contorno de BKDE
 }

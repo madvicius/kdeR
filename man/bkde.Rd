@@ -6,6 +6,16 @@
 \usage{
 bkde(sp, h = c("NS", "STE"), kernel = dmvnorm, ngrid = 100)
 }
+\arguments{
+\item{sp}{vetor numérico de qual o bkde irá estimar a densidade}
+
+\item{h}{método utilizado para o cálculo de h. A funcao possui duas opcões
+, "STE" (solve the equation) e "NS" (normal scale). default = STE}
+
+\item{kernel}{kernel utilizado na estimacão. default = dmvnorm}
+
+\item{ngrid}{numero de pontos na malha. default = 100}
+}
 \description{
 Estima a distribuicão bivariada de uma amostra por KDE
 }

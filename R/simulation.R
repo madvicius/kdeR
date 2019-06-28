@@ -6,8 +6,10 @@
 
 #' Amostra uma mistura de normais univariada
 #' @export rnormmix
-#' @import dplyr
-#'
+#' @param n número de onservacões
+#' @param mu vetor das médias
+#' @param sigma vetor da variâncias
+#' @param prop vetor das probabilidades
 rnormmix <- function(
     n,
     mu,
@@ -27,6 +29,10 @@ rnormmix <- function(
 
 #' Densidade da mistura de normais univariada
 #' @export dnormmix
+#' @param n número de onservacões
+#' @param mu vetor das médias
+#' @param sigma vetor da variâncias
+#' @param prop vetor das probabilidades
 dnormmix <- function(
     x,
     mu,
@@ -41,6 +47,10 @@ dnormmix <- function(
 
 #' Amostra uma mistura de normais bivariadas
 #' @export rbnormmix
+#' @param n número de onservacões
+#' @param mu vetor das médias
+#' @param sigma vetor da variâncias
+#' @param prop vetor das probabilidades
 rbnormmix <- function(
     n,
     mu,

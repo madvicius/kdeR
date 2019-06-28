@@ -2,10 +2,15 @@
 % Please edit documentation in R/kde.R
 \name{plot.kde}
 \alias{plot.kde}
-\title{Plota a densidade estimada por KDE}
+\title{Plota a densidade estimada pelo KDE univariado}
 \usage{
 \method{plot}{kde}(kde, xlab = "x", ylab = "density", ...)
 }
+\arguments{
+\item{kde}{objeto da classe kde}
+
+\item{...}{você pode utilizar outros argumentos da funcão plot.default}
+}
 \description{
-Plota a densidade estimada por KDE
+Plota a densidade estimada pelo KDE univariado
 }

@@ -6,6 +6,11 @@
 \usage{
 \method{plot}{bkde}(bkde, xlab = "x", ylab = "y", ...)
 }
+\arguments{
+\item{bkde}{objeto da classe bkde}
+
+\item{...}{você pode utilizar outros argumentos da funcão plot.default}
+}
 \description{
 Plota os dados de BKDE
 }

@@ -7,6 +7,9 @@
 \method{persp}{bkde}(bkde, xlab = "x", ylab = "y", zlab = "density",
   ticktype = "detailed", ...)
 }
+\arguments{
+\item{bkde}{objeto da classe bkde}
+}
 \description{
 Plota a densidade estimada por BKDE
 }

@@ -9,7 +9,13 @@
 \arguments{
 \item{bkde}{objeto da classe bkde}
 
-\item{...}{você pode utilizar outros argumentos da funcão plot.default}
+\item{...}{você pode utilizar outros argumentos da funcão plot.default
+xy <- rbnormmix(100, list(c(-5, -5), c(5, 5)))
+
+bmix_bkde <- bkde(xy, h='STE')
+
+plot(bmix_bkde,pch=16)
+contour(bmix_bkde,add=TRUE)}
 }
 \description{
 Plota os dados de BKDE
